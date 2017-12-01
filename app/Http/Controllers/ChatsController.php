@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\MessageSent;
+use App\Message;
+use Illuminate\Support\Facades\Auth;
+
 
 class ChatsController extends Controller
 {
 
 // app/Http/Controllers/ChatsController.php
 
-use App\Events\MessageSent;
-use Illuminate\Http\Request;
-use App\Message;
-use Illuminate\Support\Facades\Auth;
 
     public function __construct()
     {
