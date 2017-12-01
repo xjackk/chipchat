@@ -9,9 +9,9 @@ class ChatsController extends Controller
 
 // app/Http/Controllers/ChatsController.php
 
-use App\Message;
 use App\Events\MessageSent;
 use Illuminate\Http\Request;
+use App\Message;
 use Illuminate\Support\Facades\Auth;
 
     public function __construct()
