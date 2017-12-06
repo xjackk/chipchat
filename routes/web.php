@@ -17,9 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('messages', 'ChatsController@fetchMessages');
 
-Route::get('/', 'ChatsController@index'); # main view for the chats
+Route::get('/chats', 'ChatsController@index'); # main view for the chats
+
 Route::get('messages', 'ChatsController@fetchMessages');
 Route::post('messages', 'ChatsController@sendMessage');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/about', 'AboutController@index'); // about view
+
+Route::get('/profile', 'UserConroller@profile'); // get profile view
+
+//Route::get('/profile', ''); // Profile View
+

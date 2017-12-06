@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Abhitheawesomecoder\Laraveleditprofile\EditprofileServiceProvider::class,
 
         /*
          * Application Service Providers...
