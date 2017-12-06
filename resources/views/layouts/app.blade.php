@@ -13,6 +13,8 @@
 		<!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/extra.css') }}" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		
   </head>
   <body>
     <div id="app">
@@ -30,8 +32,9 @@
 
 						<!-- Branding Image -->
 						<a class="navbar-brand" href="{{ url('/') }}">
-							{{ config('app.name', 'Laravel') }}
+							{{ config('app.name', 'Laravel') }} <i class="fa fa-weixin" aria-hidden="true"></i>
 						</a>
+
 					</div>
 
 					<div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -65,7 +68,7 @@
 										</form>
 									</li>
 									<li>
-										<a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i></a>
+										<a href="{{ url('/profile') }}">Profile <i class="fa fa-btn fa-user"></i></a>
 									</li>
 								</ul>
 							</li>
