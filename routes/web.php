@@ -28,7 +28,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/about', 'AboutController@index'); // about view
 
-Route::get('/profile', 'UserConroller@profile'); // get profile view
+Route::get('/profile', 'UserController@profile'); // get profile view
+
+//Route::post('/profile/{id}/edit', 'UserController@edit');
+//Route::get('profile/{id}/edit', 'UserController@edit');
+
+route::resource('users', "UserController");
+
+//Route::get('/users', 'UserController@index'); // display all users
 
 //Route::get('/profile', ''); // Profile View
 
