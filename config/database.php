@@ -63,12 +63,16 @@ return [
         ],
 
         # then edit in 'config/database.php
+        # env('DB_HOST', 'localhost')
+        # env('DB_DATABASE', 'forge')
+        # env('DB_USERNAME', 'forge')
+        # env('DB_PASSWORD', '')
         'pgsql' => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host'     => $host,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'charset'  => 'utf8',
             'prefix'   => '',
             // Notice the following has been modified
