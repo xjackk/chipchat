@@ -86,7 +86,7 @@ return [
         #    'password' => env('DB_PASSWORD', ''),
         #    'charset'  => 'utf8',
         #    'prefix'   => '',
-        #    // Notice the following has been modified
+            // Notice the following has been modified
         #    'schema'   => env('DB_PGSQL_SCHEMA','public'),
         #],
         'sqlsrv' => [
