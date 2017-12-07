@@ -87,10 +87,10 @@
           @auth
             <a href="/users">Users</a>
             <a href="/about">About</a>
-					  <a href="https://github.com/xjackk/">GitHub</a>
+					  <a href="https://github.com/xjackk/chipchat">GitHub</a>
           @else
 	  				<a href="/about">About</a>
-					  <a href="https://github.com/xjackk/">GitHub</a>
+					  <a href="https://github.com/xjackk/chipchat">GitHub</a>
             @endauth
 				</div>
       </div>
