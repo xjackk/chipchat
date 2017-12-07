@@ -1,6 +1,6 @@
 <?php
 
-$url = parse_url(getenv("CLEAR_DATABASE_URL"));
+$url = parse_url(getenv("DATABASE_URL"));
 $host = $url["host"];
 $username = $url["user"];
 $password = $url["pass"];
@@ -19,7 +19,7 @@ return [
       |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
       |--------------------------------------------------------------------------
@@ -62,22 +62,33 @@ return [
             'engine' => null,
         ],
 
+        'pgsql' => [
+            'driver'   => 'pgsql',
+            'host'     => parse_url(getenv("DATABASE_URL"))["host"],
+            'database' => substr(parse_url(getenv("DATABASE_URL"))["path"], 1),
+            'username' => parse_url(getenv("DATABASE_URL"))["user"],
+            'password' => parse_url(getenv("DATABASE_URL"))["pass"],
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ],
+
         # then edit in 'config/database.php
         # env('DB_HOST', 'localhost')
         # env('DB_DATABASE', 'forge')
         # env('DB_USERNAME', 'forge')
         # env('DB_PASSWORD', '')
-        'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', 'localhost'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            // Notice the following has been modified
-            'schema'   => env('DB_PGSQL_SCHEMA','public'),
-        ],
+        #'pgsql' => [
+        #    'driver'   => 'pgsql',
+        #    'host'     => env('DB_HOST', 'localhost'),
+        #    'database' => env('DB_DATABASE', 'forge'),
+        #    'username' => env('DB_USERNAME', 'forge'),
+        #    'password' => env('DB_PASSWORD', ''),
+        #    'charset'  => 'utf8',
+        #    'prefix'   => '',
+        #    // Notice the following has been modified
+        #    'schema'   => env('DB_PGSQL_SCHEMA','public'),
+        #],
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
